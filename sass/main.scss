@@ -1,0 +1,601 @@
+/*
+Main styles of the web page
+*/
+
+@import 'builder';
+
+body{
+  font-family: $font-group;
+}
+
+p{
+  @include paragraph (17px, $secundary-color)
+}
+.innerContainer{
+  @include box-set-up (auto,#FFF, 110px);
+  overflow: hidden;
+}
+
+//Global
+h1{
+   @include paragraph (50px, black);
+}
+
+h4{
+  font-weight: bold;
+}
+
+label{
+  @include paragraph (14px, black);
+}
+
+.glyphicon {
+    line-height: 1.55;
+}
+
+.option-icon{
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.redBtn{
+  display: inline-block;
+  color: white;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-right: 10px;
+  @include custom-button(5%, 2px,#EE2C3E);
+  &:hover{
+    background-color: #D62838;
+    color: white;
+    text-decoration: none;
+  }
+  &:first-child{
+    background-color: #800303;
+    &:hover{
+      background-color: #993535;
+    }
+  }
+  &:last-child{
+    background-color: #99B265;
+    &:hover{
+      background-color: #8AA05B;
+    }
+  }
+}
+
+//Main button styles
+$primary-lighten: lighten($primary-color, 20);
+
+.bookButton{
+  @include custom-button(35px, 10px, $primary-color);
+  color: #fff;
+  width: auto;
+  float: right;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  &:active{
+    background-color: $primary-color;
+  }
+  &:hover{
+    color: #fff;
+    text-decoration: none;
+    @include custom-button(35px, 10px, $primary-lighten);
+  }
+  &:focus{
+    text-decoration: none;
+    background-color: $primary-lighten;
+    color: #ffffff;
+  }
+}
+//Header
+
+header{
+  @include box-set-up (auto,#FFF, 100px);
+  text-align: right;
+  padding: 0px;
+  margin: 0px;
+  .navbar-default{
+    background-color: initial;
+    margin: 50px 0;
+    border: none;
+    .container-fluid{
+      padding:0; 
+    }
+    .navbar-brand{
+      padding-top:0;
+      padding-bottom:0;
+      margin-left: 0;
+    }
+    .navbar-nav{
+      li{
+        &:last-child{
+          a{
+            padding-right: 0;
+          }
+        }
+        a{
+          text-transform: uppercase;
+          color: black;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+// content
+.hrContainer {
+  width: 240px - 970px;
+}
+.primaryHr{
+  @include custome-hr($primary-color);
+}
+.categoriesBlock{
+  @include main-box-setup (auto,#FFF, 460px, 20px);
+  text-align: center;
+  padding-top: 40px;
+}
+.categories{
+  @include main-box-setup (auto,#FFF, 200px, 10px);
+  margin-top: 68px;
+}
+.rulesBlock{
+  @include main-box-setup (auto,#FFF, 180px, 10px);
+
+  h4{
+    color: $primary-color;
+  }
+  ul{
+    padding-left: 15px;
+  }
+}
+
+//Login form
+.form {
+  margin: 100px 0;
+  h1{
+    text-align: center;
+  }
+  p{
+    text-align: left;
+    text-transform: uppercase;
+    color: $primary-color;
+    position: relative;
+    margin-top: 50px;
+    overflow: hidden;
+    font-weight: bold;
+    &::after{
+      content:"";
+      width: 100%;
+      height: 2px;
+      background-color: $primary-color;
+      position: absolute;
+      bottom: 5px;
+      left: 220px;
+    }
+  }
+  form{
+    text-align: left;
+    margin-top: 50px;
+    label{
+
+    }
+    input{
+      background-color: LightGray;
+      border-radius: 0;
+    }
+    .btn-default{
+      background-color: $primary-color;
+      width: 150px;
+      border-radius: 0;
+      float: right;
+      &:hover{
+        background-color: #7c45c9;
+      }
+      &:active {
+        background-color: #7c45c9 !important;
+      }
+      color: white !important;
+    }
+  }
+}
+
+
+// footer
+footer{
+  @include main-box-setup (auto,$primary-color, 180px, 20px);
+  padding-top: 30px;
+  color: #fff;
+  clear: both;
+  p{
+    color: #fff;
+  }
+  table, td, tr, tbody{
+    border: 0px;
+  }
+}
+.footerInnerContainer{
+  @include box-set-up (auto,$primary-color, 200px);
+}
+.prodigiousLogo{
+  @include main-box-setup (auto,#FFF, 40px, 20px);
+  text-align: right;
+  img{
+    float: right;
+  }
+}
+.footerContactBlock{
+  @include box-set-up (auto,$primary-color, 15px);
+  margin: 0px;
+  padding: 0px;
+  a{
+    color: #fff;
+  }
+}
+.footerContactBlock2{
+  @include box-set-up (auto,$primary-color, 15px);
+  margin: 0px;
+  padding: 0px;
+  padding-left: 10px;
+  a{
+    color: #fff;
+  }
+}
+.rightLine{
+  border-right: 1px solid #FFF;
+}
+/*
+  Resourses
+*/
+//design
+.resoursesMainBlock{
+  @include main-box-setup (auto,#FFF, 240px, 20px);
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.designResoursesBlock{
+  @include main-box-setup (auto,#FFF, 180px, 10px);
+  padding-bottom: 50px;
+
+  h4{
+    color: $design-color;
+  }
+  .primaryHr{
+    @include custome-hr($design-color);
+  }
+  .mobile_options{
+    display: none;
+  }
+}
+.redHighlight{
+  font-weight: bold;
+  color: $design-color;
+  text-transform: uppercase;
+}
+//development
+.developmentResoursesBlock{
+  @include main-box-setup (auto,#FFF, 180px, 10px);
+  padding-bottom: 50px;
+
+  h4{
+    color: $development-color;
+  }
+  .primaryHr{
+    @include custome-hr($development-color);
+  }
+}
+.greenHighlight{
+  font-weight: bold;
+  color: $development-color;
+  text-transform: uppercase;
+}
+//motion
+.motionResoursesBlock{
+  @include main-box-setup (auto,#FFF, 180px, 10px);
+  padding-bottom: 50px;
+
+  h4{
+    color: $motion-color;
+  }
+  .primaryHr{
+    @include custome-hr($motion-color);
+  }
+}
+.motionHighlight{
+  font-weight: bold;
+  color: $motion-color;
+  text-transform: uppercase;
+}
+//QA
+.qaResoursesBlock{
+  @include main-box-setup (auto,#FFF, 180px, 10px);
+  padding-bottom: 50px;
+
+  h4{
+    color: $qa-color;
+  }
+  .primaryHr{
+    @include custome-hr($qa-color);
+  }
+}
+.qaHighlight{
+  font-weight: bold;
+  color: $qa-color;
+  text-transform: uppercase;
+}
+.resourse1{
+  @include box-set-up (auto,#fff, 10px);
+  padding: 20px 5px 10px 5px;
+}
+.resourse2{
+  @include box-set-up (auto,#E2F4FB, 10px);
+  padding: 20px 5px 10px 5px;
+}
+.greenHighlight{
+  font-weight: bold;
+  color: $development-color;
+}
+/*
+  Profile
+*/
+.buttonContainer{
+  @include box-set-up (auto,#FFF, 90px);
+  padding-bottom: 40px;
+}
+
+
+//Create profile page
+.createProfilePage{
+  text-transform: uppercase;
+  h1, h4{
+    color: $primary-color; 
+  }
+  label{
+    font-size: 14px;
+    padding-left: 10px;
+  }
+  .primaryHr{
+    border-color: $primary-color;
+  }
+  .primaryHighlight{
+    color: $primary-color;
+  }
+  textarea{
+    width: 50%;
+    height: 100px;
+    padding: 10px;
+  }
+  a{
+    &.circle {
+      width: 28px;
+      height: 28px;
+      background-color: #81BF40;
+      border-radius: 100%;
+      display: inline-block;
+      margin-right: 15px;
+    }
+    &.half_booked{
+      background: url("../images/half_booked.png") no-repeat;
+    }
+    &.booked{
+      background: url("../images/booked.png") no-repeat;
+    }
+    &#availability_btn {
+      text-transform: uppercase;
+      color: white;
+      text-decoration: none;
+    }
+  }
+  #add-profile-icon{
+      width: 119px;
+      height: 120px;
+      background-color: $primary-color;
+      border-radius: 100%;
+      margin: auto;
+      .glyphicon {
+        color: white;
+        line-height: 2;
+        font-size: 60px;
+      }
+  }
+
+  .buttonContainer{
+    margin: 50px 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: initial;
+    .bookButton{
+      margin-bottom: 0;
+    }
+  }
+  input, textarea, select {
+    background-color: LightGray;
+    border-radius: 0;
+  }
+}
+
+
+
+/*
+admin
+*/
+.welcomeBar{
+  @include main-box-setup (auto,$primary-color, 10px, 10px);
+  padding: 5px;
+  color: #fff;
+  p{
+    color: #fff;
+  }
+}
+.adminBarContainer{
+  @include box-set-up (auto,$primary-color, 0px);
+  text-align: right;
+}
+
+//Set Development Page
+.setDevelopmentPage{ 
+  h4{
+    color: $development-color;
+  }
+  .primaryHr{
+    @include custome-hr($development-color);
+  }
+}
+
+//Set QA Page
+.setQAPage{
+  h4{
+    color: $qa-color;
+  }
+  .primaryHr{
+    @include custome-hr($qa-color);
+  }
+}
+
+.setMotionPage{
+  h4{
+    color: $motion-color;
+  }
+  .primaryHr{
+    @include custome-hr($motion-color);
+  }
+}
+
+/*
+  Media Queries
+*/
+@media (max-width: 1300px){
+  table, td, tr, tbody{
+    border: 0px;
+    display: block;
+  }
+}
+@media (max-width: 1000px){
+  .categoryContainer{
+    width: 100%;
+    margin: 0%;
+  }
+  .footerInnerContainer{
+    width: 90%;
+    margin-right:  5%;
+    margin-left:  5%;
+  }
+  .innerContainer{
+    width: 90%;
+    margin-left: 5%;
+  }
+  table, td, tr, tbody{
+    border: 0px;
+    display: block;
+  }
+  .form{
+    margin: 40px 0 100px;
+  }
+}
+
+@media (max-width: 991px){
+  //Create profile page
+  .createProfilePage{
+    .form-group{
+      &:first-child{
+        padding-right: 0;
+      }
+      &:nth-child(2){
+        padding-left: 0;
+      } 
+    }
+  }
+}
+
+@media (max-width: 768px){
+  //Create Profile Page
+  .createProfilePage{
+    textarea{
+      width: 100%;
+    }
+    label{
+      padding-left: 0;
+    }
+  }
+  h1{
+    font-size: 35px;
+  }
+  .resoursesMainBlock{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 10px;
+    .main_icon{
+      width: 80px;
+    }
+  }
+  .redBtn{
+    margin-right: 0;
+  }
+  .glyphicon {
+    line-height: 2.6;
+  }
+  .option-icon{
+    line-height: 1.1;
+  }
+  header{
+    .navbar-default{
+      margin: 20px;
+      .container-fluid{
+        padding-left: 15px;
+      }
+      .navbar-brand{
+        padding-left:0;
+      }
+      .navbar-nav{
+        li{
+          &:last-child{
+            a{
+              padding-right: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .innerContainer{
+    width: 100%;
+    padding: 30px;
+    margin-left: 0%;
+  }
+  .categoriesBlock{
+    margin-bottom: 40px;
+  }
+  .categories{
+    width: 50%;
+    margin: 0px;
+    float: left;
+  }
+  table, td, tr, tbody{
+    border: 0px;
+    display: block;
+    text-align: center;
+    padding: 5px;
+  }
+  .rightLine{
+    border-right: 0px;
+  }
+  .resourse1{
+    padding: 10px;
+  }
+  .resourse2{
+    padding: 10px;
+  }
+
+}
+@media (max-width: 400px){
+  .innerContainer{
+    width: 100%;
+    padding: 30px;
+    margin-left: 0%;
+  }
+}

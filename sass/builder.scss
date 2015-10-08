@@ -1,0 +1,61 @@
+
+
+//Set colors
+$primary-color: #4C2682;
+$secundary-color: #000;
+
+$design-color: #EE2C3E;
+$qa-color: #F5871F;
+$development-color: #80BC40;
+$motion-color: #00B4DC;
+
+//
+// Here start the constructors
+//
+
+@font-face {font-family: 'Gotham',Arial, sans-serif; src: url('../fonts/Gotham.otf');}
+$h-font-group: 'Gotham',Arial, sans-serif;
+$font-group: 'Gotham',Arial, sans-serif;
+
+@mixin paragraph ($font-size, $color) {
+  font-size: $font-size;
+  color: $color;
+  font-family: $font-group;
+}
+@mixin h ($font-size, $color) {
+  font-size: $font-size;
+  color: $color;
+  font-family: $h-font-group;
+  font-weight: bold;
+}
+@mixin box-set-up ($height,$bg-color, $min-height){
+  height: $height;
+  background-color: $bg-color;
+  min-height: $min-height;
+}
+@mixin custom-button($side-padd, $top-back-padd, $bg-color){
+  padding: $top-back-padd $side-padd;
+  background-color: $bg-color;
+}
+@mixin main-box-setup($height,$bg-color, $min-height, $padding){
+  height: $height;
+  background-color: $bg-color;
+  min-height: $min-height;
+  padding: 0px;
+  margin: 0px;
+}
+@mixin custome-hr($color){
+    border: 2px solid $color;
+}
+//
+// Media Queries
+//
+@media (min-width: 768px){
+  @mixin main-box-setup($height,$bg-color, $min-height, $padding){
+    height: $height;
+    background-color: $bg-color;
+    min-height: $min-height;
+    padding: $padding;
+    margin: 0px;
+  }
+}
