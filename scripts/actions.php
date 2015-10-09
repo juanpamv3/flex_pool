@@ -65,7 +65,7 @@ Display Resourses
 
 //Get Available Profiles
 function getAvailable($connection, $today, $category){
-  $sql = "SELECT id, name, country, role, skills, availability FROM profiles WHERE category = $category";
+  $sql = "SELECT id, name, country, role, skills, availability FROM profiles WHERE category = $category ORDER BY last_modified";
   $result = $connection->query($sql);
   if ($result->num_rows > 0) {
       // output data of each row
@@ -103,7 +103,7 @@ function getAvailable($connection, $today, $category){
                 </div>
               </div>';
             }
-          } 
+          }
       }
   } else {
       echo "0 results";

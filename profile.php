@@ -217,7 +217,7 @@
                 $client = json_decode($row["agency"]);
                 for ($x = 10; $x <= 14; $x++){
                   if ($client[$x] == ""){
-                  
+
                 } else if($client[$x] == ""){
 
                 } else{
