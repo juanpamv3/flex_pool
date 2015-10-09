@@ -146,18 +146,20 @@
               </div>
               <div class="col-sm-5">
                 <p>AGENCY</p>
+                <p/>
                 <?php
                 $client = json_decode($row["agency"]);
                 for ($x = 0; $x <= 4; $x++){
                   if ($client[$x] == ""){
-                  echo  '<p></p>';
+
                 } else if($client[$x] == ""){
-                  echo '<p></p>';
+
                 } else{
-                  echo '<p>'.$client[$x].'</p>';
+                  echo $client[$x];
                 }
                 }
                 ?>
+              </p>
               </div>
             </div><!-- End of week1 -->
             <div class="col-sm-12 resourse2">
@@ -177,18 +179,20 @@
               </div>
               <div class="col-sm-5">
                 <p>AGENCY</p>
+                <p>
                 <?php
                 $client = json_decode($row["agency"]);
-                for ($x = 0; $x <= 4; $x++){
+                for ($x = 5; $x <= 9; $x++){
                   if ($client[$x] == ""){
-                  echo  '<p></p>';
+
                 } else if($client[$x] == ""){
-                  echo '<p></p>';
+
                 } else{
-                  echo '<p>'.$client[$x].'</p>';
+                  echo $client[$x].", ";
                 }
                 }
                 ?>
+              </p>
               </div>
             </div><!-- End of week -->
             <div class="col-sm-12 resourse1">
@@ -208,18 +212,20 @@
               </div>
               <div class="col-sm-5">
                 <p>AGENCY</p>
+                <p>
                 <?php
                 $client = json_decode($row["agency"]);
-                for ($x = 0; $x <= 4; $x++){
+                for ($x = 10; $x <= 14; $x++){
                   if ($client[$x] == ""){
-                  echo  '<p></p>';
+                  
                 } else if($client[$x] == ""){
-                  echo '<p></p>';
+
                 } else{
-                  echo '<p>'.$client[$x].'</p>';
+                  echo $client[$x].", ";
                 }
                 }
                 ?>
+              </p>
               </div>
             </div><!-- End of week -->
             <div class="col-sm-12 resourse2">
@@ -240,18 +246,20 @@
               </div>
               <div class="col-sm-5">
                 <p>AGENCY</p>
+                <p>
                 <?php
                 $client = json_decode($row["agency"]);
-                for ($x = 0; $x <= 4; $x++){
+                for ($x = 15; $x <= 19; $x++){
                   if ($client[$x] == ""){
-                  echo  '<p></p>';
+
                 } else if($client[$x] == ""){
-                  echo '<p></p>';
+
                 } else{
-                  echo '<p>'.$client[$x].'</p>';
+                  echo $client[$x].", ";
                 }
                 }
                 ?>
+              </p>
               </div>
             </div><!-- End of week -->
         </div>
