@@ -155,7 +155,7 @@
                 } else if($client[$x] == ""){
 
                 } else{
-                  echo $client[$x];
+                  echo $client[$x].', ';
                 }
                 }
                 ?>

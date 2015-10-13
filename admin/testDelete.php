@@ -27,16 +27,9 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script>
-    // delete
       $('input').click(function(){
         var rowNumber = $(this).data('rownumber');
-        $.post( "scripts/deleteUser.php", { _id: rowNumber } );
-        $(this).remove();
-      });
-      // set availability
-      $('input').click(function(){
-        var rowNumber = $(this).data('rownumber');
-        $.post( "scripts/deleteUser.php", { _id: rowNumber } );
+        $.post( "../scripts/deleteUser.php", { _id: rowNumber } );
         $(this).remove();
       });
     </script>
