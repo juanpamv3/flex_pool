@@ -18,6 +18,20 @@ p {
   min-height: 110px;
   overflow: hidden; }
 
+a:hover {
+  text-decoration: none; }
+a.circle {
+  width: 28px;
+  height: 28px;
+  background-color: #81BF40;
+  border-radius: 100%;
+  display: inline-block;
+  margin-right: 15px; }
+a.half_booked {
+  background: url("../images/half_booked.png") no-repeat; }
+a.booked {
+  background: url("../images/booked.png") no-repeat; }
+
 h1 {
   font-size: 50px;
   color: black;
@@ -102,8 +116,10 @@ header {
       padding-right: 0; }
     header .navbar-default .navbar-nav li a {
       text-transform: uppercase;
-      color: black;
-      font-weight: bold; }
+      color: black; }
+
+.navbar-header {
+  padding-bottom: 15px; }
 
 .hrContainer {
   width: -730px; }
@@ -127,13 +143,21 @@ header {
   padding: 0px;
   margin: 0px;
   margin-top: 68px; }
+  .categories a {
+    color: black; }
+    .categories a img {
+      margin-bottom: 20px; }
+    .categories a h4 {
+      font-weight: normal;
+      text-transform: uppercase; }
 
 .rulesBlock {
   height: auto;
   background-color: #FFF;
   min-height: 180px;
   padding: 0px;
-  margin: 0px; }
+  margin: 0px;
+  clear: both; }
   .rulesBlock h4 {
     color: #4C2682; }
   .rulesBlock ul {
@@ -189,6 +213,14 @@ footer {
     color: #fff; }
   footer table, footer td, footer tr, footer tbody {
     border: 0px; }
+  footer .footer_icon {
+    width: 27px;
+    height: 27px;
+    border-radius: 100%;
+    background-color: white; }
+    footer .footer_icon img {
+      padding-top: 5px;
+      padding-left: 5px; }
 
 .footerInnerContainer {
   height: auto;
@@ -350,17 +382,6 @@ footer {
     width: 50%;
     height: 100px;
     padding: 10px; }
-  .createProfilePage a.circle {
-    width: 28px;
-    height: 28px;
-    background-color: #81BF40;
-    border-radius: 100%;
-    display: inline-block;
-    margin-right: 15px; }
-  .createProfilePage a.half_booked {
-    background: url("../images/half_booked.png") no-repeat; }
-  .createProfilePage a.booked {
-    background: url("../images/booked.png") no-repeat; }
   .createProfilePage a#availability_btn {
     text-transform: uppercase;
     color: white;
@@ -514,7 +535,12 @@ admin
     padding: 10px; }
 
   .resourse2 {
-    padding: 10px; } }
+    padding: 10px; }
+
+  footer .footer_icon {
+    margin: auto; }
+    footer .footer_icon img {
+      padding-left: 0; } }
 @media (max-width: 400px) {
   .innerContainer {
     width: 100%;

@@ -1,63 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Flex Pool</title>
+<?php
+$mysqli = new mysqli("localhost", "root", "root", "flex_pool_db");
+if ($mysqli->connect_errno) {
+    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+} else {
 
-    <!-- Bootstrap -->
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link href="../css/main.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="container setQAPage">
-      <div class="col-sm-offset-2 col-sm-8 innerContainer">
-        <!-- header -->
-        <header class="col-sm-12">
-          <nav class="navbar navbar-default">
-            <div class="container-fluid">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><img src="../images/flex-pool-logo.gif" /></a>
-              </div>
-
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                  <li>
-                    <a href="#"><img src="../images/admin/icon1.svg" class="hidden-xs" alt="Add Profile Icon"> Add Profile</a>
-                  </li>
-                  <li><a href="#"><img src="../images/admin/icon2.svg" class="hidden-xs" alt="Delete Profile Icon"> Delete Profile</a></li>
-                  <li><a href="#"><img src="../images/admin/icon3.svg" class="hidden-xs" alt="Availability Icon"> Availability</a></li>
-                </ul>
-              </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-          </nav>
-        </header><!-- End of header -->
-      </div>
-        <div class="col-sm-12 welcomeBar">
-          <div class="col-sm-offset-2 col-sm-8 adminBarContainer">Welcome, Adrian</div>
-        </div>
+} ?>
+<?php include 'header.php'; ?>
       <div class="col-sm-offset-2 col-sm-8 innerContainer">
         <div class="col-sm-12 resoursesMainBlock">
-          <img src="../images/qa_icon.png" class="main_icon" />
-          <h1>QA | RESOURSES</h1>
+          <img src="../images/design_icon.png" class="main_icon" />
+          <h1>DESIGN | RESOURSES</h1>
           <p>Select one role to see full availability</p>
         </div><!-- End of categories -->
 
@@ -86,7 +38,8 @@
               <div class="col-sm-5">
                 <p>ACTIONS</p>
               </div>
-            </div><!-- End of Resourses header -->
+            </div><!-- End of Resourses header --> 
+
             <div class="col-sm-12 resourse1">
               <div class="col-xs-2 mobile_options visible-xs-block">
                 <div class="visible-xs-block"><span class="glyphicon glyphicon-globe option-icon"></span></div><p class="hidden-xs">SITE</p>
@@ -98,10 +51,10 @@
                 <p>CR</p>
               </div>
               <div class="col-sm-3">
-                <p class="qaHighlight">Nombre</p>
+                <p class="redHighlight">Nombre</p>
               </div>
               <div class="col-sm-3">
-                <p class="qaHighlight">Creative Designer</p>
+                <p class="redHighlight">Creative Designer</p>
               </div>
               <div class="col-sm-5">
                 <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
@@ -119,10 +72,10 @@
                 <p>CR</p>
               </div>
               <div class="col-sm-3">
-                <p class="qaHighlight">Nombre</p>
+                <p class="redHighlight">Nombre</p>
               </div>
               <div class="col-sm-3">
-                <p class="qaHighlight">Creative Designer</p>
+                <p class="redHighlight">Creative Designer</p>
               </div>
               <div class="col-sm-5">
                 <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
@@ -140,10 +93,10 @@
                 <p>CR</p>
               </div>
               <div class="col-sm-3">
-                <p class="qaHighlight">Nombre</p>
+                <p class="redHighlight">Nombre</p>
               </div>
               <div class="col-sm-3">
-                <p class="qaHighlight">Creative Designer</p>
+                <p class="redHighlight">Creative Designer</p>
               </div>
               <div class="col-sm-5">
                 <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
@@ -161,10 +114,10 @@
                 <p>CR</p>
               </div>
               <div class="col-sm-3">
-                <p class="qaHighlight">Nombre</p>
+                <p class="redHighlight">Nombre</p>
               </div>
               <div class="col-sm-3">
-                <p class="qaHighlight">Creative Designer</p>
+                <p class="redHighlight">Creative Designer</p>
               </div>
               <div class="col-sm-5">
                 <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete </span></a>
@@ -182,10 +135,10 @@
                 <p>CR</p>
               </div>
               <div class="col-sm-3">
-                <p class="qaHighlight">Nombre</p>
+                <p class="redHighlight">Nombre</p>
               </div>
               <div class="col-sm-3">
-                <p class="qaHighlight">Creative Designer</p>
+                <p class="redHighlight">Creative Designer</p>
               </div>
               <div class="col-sm-5">
                 <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
@@ -204,10 +157,10 @@
                 <p>CR</p>
               </div>
               <div class="col-sm-3">
-                <p class="qaHighlight">Nombre</p>
+                <p class="redHighlight">Nombre</p>
               </div>
               <div class="col-sm-3">
-                <p class="qaHighlight">Creative Designer</p>
+                <p class="redHighlight">Creative Designer</p>
               </div>
               <div class="col-sm-5">
                 <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
@@ -252,10 +205,10 @@
                     <p>CR</p>
                   </div>
                   <div class="col-sm-3">
-                    <p class="qaHighlight">Nombre</p>
+                    <p class="redHighlight">Nombre</p>
                   </div>
                   <div class="col-sm-3">
-                    <p class="qaHighlight">Creative Designer</p>
+                    <p class="redHighlight">Creative Designer</p>
                   </div>
                   <div class="col-sm-5">
                     <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
@@ -273,10 +226,10 @@
                     <p>CR</p>
                   </div>
                   <div class="col-sm-3">
-                    <p class="qaHighlight">Nombre</p>
+                    <p class="redHighlight">Nombre</p>
                   </div>
                   <div class="col-sm-3">
-                    <p class="qaHighlight">Creative Designer</p>
+                    <p class="redHighlight">Creative Designer</p>
                   </div>
                   <div class="col-sm-5">
                     <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
@@ -294,10 +247,10 @@
                     <p>CR</p>
                   </div>
                   <div class="col-sm-3">
-                    <p class="qaHighlight">Nombre</p>
+                    <p class="redHighlight">Nombre</p>
                   </div>
                   <div class="col-sm-3">
-                    <p class="qaHighlight">Creative Designer</p>
+                    <p class="redHighlight">Creative Designer</p>
                   </div>
                   <div class="col-sm-5">
                     <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
@@ -315,10 +268,10 @@
                     <p>CR</p>
                   </div>
                   <div class="col-sm-3">
-                    <p class="qaHighlight">Nombre</p>
+                    <p class="redHighlight">Nombre</p>
                   </div>
                   <div class="col-sm-3">
-                    <p class="qaHighlight">Creative Designer</p>
+                    <p class="redHighlight">Creative Designer</p>
                   </div>
                   <div class="col-sm-5">
                     <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
@@ -336,10 +289,10 @@
                     <p>CR</p>
                   </div>
                   <div class="col-sm-3">
-                    <p class="qaHighlight">Nombre</p>
+                    <p class="redHighlight">Nombre</p>
                   </div>
                   <div class="col-sm-3">
-                    <p class="qaHighlight">Creative Designer</p>
+                    <p class="redHighlight">Creative Designer</p>
                   </div>
                   <div class="col-sm-5">
                     <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
@@ -358,10 +311,10 @@
                     <p>CR</p>
                   </div>
                   <div class="col-sm-3">
-                    <p class="qaHighlight">Nombre</p>
+                    <p class="redHighlight">Nombre</p>
                   </div>
                   <div class="col-sm-3">
-                    <p class="qaHighlight">Creative Designer</p>
+                    <p class="redHighlight">Creative Designer</p>
                   </div>
                   <div class="col-sm-5">
                     <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
@@ -378,41 +331,4 @@
           <img src="../images/prodigious_logo.svg" />
         </div><!-- End of Prodigious Logo -->
       </div><!-- End of innerContainer -->
-      <footer class="col-sm-12">
-        <div class="col-sm-offset-2 col-sm-8 footerInnerContainer">
-          <div class="col-sm-12">
-              <p>Staff Allocation | Status</p>
-              <div class="col-sm-4 table-responsive footerContactBlock rightLine">
-                <table class="table">
-                  <tr>
-                    <td><img src="../images/questions.gif" /></td>
-                    <td><b>Questions or issues:</b> <br/><a href="mailto:adrian.diaz@prodigious.com">adrian.diaz@prodigious.com</a></td>
-                  </tr>
-                </table>
-              </div>
-              <div class="col-sm-4 table-responsive footerContactBlock2 rightLine">
-                <table class="table">
-                  <tr>
-                    <td><img src="../images/questions.gif" /></td>
-                    <td><b>MU Booking:</b> <br/><a href="mailto:rajeeb.gangoosingh@prodigious.mu">rajeeb.gangoosingh@prodigious.mu</a></td>
-                  </tr>
-                </table>
-              </div>
-              <div class="col-sm-4 table-responsive footerContactBlock2">
-                <table class="table">
-                  <tr>
-                    <td><img src="../images/questions.gif" /></td>
-                    <td><b>Unit based and project work:</b> <br/><a href="mailto:ned.elmore@prodigious.com">ned.elmore@prodigious.com</a></td>
-                  </tr>
-                </table>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js/bootstrap.min.js"></script>
-  </body>
-</html>
+  <?php include 'footer.php'; ?>

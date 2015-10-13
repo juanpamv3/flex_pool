@@ -8,9 +8,8 @@
     <title>Flex Pool</title>
 
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link href="../css/main.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,7 +19,7 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container createProfilePage">
+    <div class="container">
       <div class="col-sm-offset-2 col-sm-8 innerContainer">
         <!-- header -->
         <header class="col-sm-12">
@@ -34,23 +33,19 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/admin"><img src="../images/flex-pool-logo.gif" /></a>
+                <a class="navbar-brand" href="/"><img src="../images/flex-pool-logo.gif" /></a>
               </div>
 
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                  <li>
-                    <a href="#"><img src="../images/admin/icon1.svg" class="hidden-xs" alt="Add Profile Icon"> Add Profile</a>
-                  </li>
-                  <li><a href="#"><img src="../images/admin/icon2.svg" class="hidden-xs" alt="Delete Profile Icon"> Delete Profile</a></li>
-                  <li><a href="#"><img src="../images/admin/icon3.svg" class="hidden-xs" alt="Availability Icon"> Availability</a></li>
+                  <li><a href="#">All</a></li>
+                  <li><a href="design_resourses.php">Design</a></li>
+                  <li><a href="motion_resourses.php">Motion Design</a></li>
+                  <li><a href="development_resourses.php">Development</a></li>
+                  <li><a href="qa_resourses.php">QA Analyst</a></li>
                 </ul>
               </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
           </nav>
         </header><!-- End of header -->
-      </div>
-        <div class="col-sm-12 welcomeBar">
-          <div class="col-sm-offset-2 col-sm-8 adminBarContainer">Welcome, Adrian</div>
-        </div>

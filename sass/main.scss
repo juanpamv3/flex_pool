@@ -16,6 +16,26 @@ p{
   overflow: hidden;
 }
 
+a{
+  &:hover{
+    text-decoration: none;
+  }
+  &.circle {
+      width: 28px;
+      height: 28px;
+      background-color: #81BF40;
+      border-radius: 100%;
+      display: inline-block;
+      margin-right: 15px;
+    }
+    &.half_booked{
+      background: url("../images/half_booked.png") no-repeat;
+    }
+    &.booked{
+      background: url("../images/booked.png") no-repeat;
+    }
+}
+
 //Global
 h1{
    @include paragraph (50px, black);
@@ -119,11 +139,14 @@ header{
         a{
           text-transform: uppercase;
           color: black;
-          font-weight: bold;
         }
       }
     }
   }
+}
+
+.navbar-header{
+  padding-bottom: 15px;
 }
 
 // content
@@ -141,9 +164,20 @@ header{
 .categories{
   @include main-box-setup (auto,#FFF, 200px, 10px);
   margin-top: 68px;
+  a {
+    img{
+      margin-bottom: 20px;
+    }
+    color: black;
+    h4{
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+  }
 }
 .rulesBlock{
   @include main-box-setup (auto,#FFF, 180px, 10px);
+  clear: both;
 
   h4{
     color: $primary-color;
@@ -216,7 +250,18 @@ footer{
   table, td, tr, tbody{
     border: 0px;
   }
+  .footer_icon{
+    width: 27px;
+    height: 27px;
+    border-radius: 100%;
+    background-color: white;
+    img{
+      padding-top: 5px;
+      padding-left: 5px;
+    }
+  }
 }
+
 .footerInnerContainer{
   @include box-set-up (auto,$primary-color, 200px);
 }
@@ -247,6 +292,8 @@ footer{
 .rightLine{
   border-right: 1px solid #FFF;
 }
+
+
 /*
   Resourses
 */
@@ -370,20 +417,6 @@ footer{
     padding: 10px;
   }
   a{
-    &.circle {
-      width: 28px;
-      height: 28px;
-      background-color: #81BF40;
-      border-radius: 100%;
-      display: inline-block;
-      margin-right: 15px;
-    }
-    &.half_booked{
-      background: url("../images/half_booked.png") no-repeat;
-    }
-    &.booked{
-      background: url("../images/booked.png") no-repeat;
-    }
     &#availability_btn {
       text-transform: uppercase;
       color: white;
@@ -590,7 +623,14 @@ admin
   .resourse2{
     padding: 10px;
   }
-
+  footer{
+    .footer_icon {
+      margin: auto;
+      img {
+        padding-left: 0;
+      }
+    }
+  }
 }
 @media (max-width: 400px){
   .innerContainer{

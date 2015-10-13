@@ -8,8 +8,8 @@
     <title>Flex Pool</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,59 +24,31 @@
         <!-- header -->
         <header class="col-sm-12">
           <div class="col-sm-3 logo">
-            <img src="images/flex-pool-logo.gif" />
+            <img src="../images/flex-pool-logo.gif" />
           </div>
-          <nav class="col-sm-9">
-            <ul>
-              <li>All</li>
-              <li>DESIGN</li>
-              <li>MOTION DESIGN</li>
-              <li>DEVELOPMENT</li>
-              <li>QA ANALYST</li>
-            </ul>
-          </nav>
         </header><!-- End of header -->
+      </div>
+      <div class="col-sm-offset-2 col-sm-8 innerContainer">
         <!-- Categories -->
-        <div class="col-sm-12 categoriesBlock">
+        <div class="col-sm-12 form">
           <h1>Staff Allocation | Status</h1>
-          <p>Select Category</p>
-          <div class="col-sm-offset-1 col-sm-10 categoryContainer">
-            <div class="col-sm-3 categories">
-              <img src="images/design_icon.png" />
-              <h4>DESIGN</h4>
-            </div>
-            <div class="col-sm-3 categories">
-              <img src="images/motion_icon.png" />
-              <h4>MOTION DESIGN</h4>
-            </div>
-            <div class="col-sm-3 categories">
-              <img src="images/development_icon.png" />
-              <h4>DEVELOPMENT</h4>
-            </div>
-            <div class="col-sm-3 categories">
-              <img src="images/qa_icon.png" />
-              <h4>QA ANALYST</h4>
-            </div>
+          <p>Administrator Login</p>
+          <div class="col-sm-12 categoryContainer">
+            <form action="../scripts/login.php" method="post" class="col-md-5">
+            	<div class="form-group">
+	            	<label for="_user">User name:</label>
+	            	<input type="text" id="_user" name="_user" class="form-control" required>
+	            </div>
+	            <div class="form-group">
+	            	<label for="_password">Password:</label>
+	            	<input type="password" id="_password" name="_password" class="form-control" required>
+	            </div>
+	            	<button type="submit" class="btn btn-default">Login</button>
+            </form>
           </div>
-        </div><!-- End of categories -->
-        <div class="col-sm-12 rulesBlock">
-          <div class="col-sm-4" style="width: auto; padding-right: 10px;" id="sectionHeader">
-            <h4>RULES OF ENGAGEMENT:</h4>
-          </div>
-          <div class="row hrContainer">
-            <hr class="primaryHr"/>
-          </div>
-          <div class="col-sm-12">
-          <ul>
-            <li>Usage is based upon a first come first served model.</li>
-            <li>Minimum time a resource can be reserved is an 8 h ours period.</li>
-            <li>Holiday and OT rules apply.</li>
-            <li>Book Commitment: Pay per what is originally booked at a given time.</li>
-          </ul>
-        </div>
         </div><!-- End of categories -->
         <div class="col-sm-12 prodigiousLogo">
-          <img src="images/prodigious_logo.svg" />
+          <img src="../images/prodigious_logo.svg" />
         </div><!-- End of Prodigious Logo -->
       </div><!-- End of innerContainer -->
       <footer class="col-sm-12">
@@ -86,7 +58,7 @@
               <div class="col-sm-4 table-responsive footerContactBlock rightLine">
                 <table class="table">
                   <tr>
-                    <td><img src="images/questions.gif" /></td>
+                    <td><img src="../images/questions.gif" /></td>
                     <td><b>Questions or issues:</b> <br/><a href="mailto:adrian.diaz@prodigious.com">adrian.diaz@prodigious.com</a></td>
                   </tr>
                 </table>
@@ -94,7 +66,7 @@
               <div class="col-sm-4 table-responsive footerContactBlock2 rightLine">
                 <table class="table">
                   <tr>
-                    <td><img src="images/questions.gif" /></td>
+                    <td><img src="../images/questions.gif" /></td>
                     <td><b>MU Booking:</b> <br/><a href="mailto:rajeeb.gangoosingh@prodigious.mu">rajeeb.gangoosingh@prodigious.mu</a></td>
                   </tr>
                 </table>
@@ -102,7 +74,7 @@
               <div class="col-sm-4 table-responsive footerContactBlock2">
                 <table class="table">
                   <tr>
-                    <td><img src="images/questions.gif" /></td>
+                    <td><img src="../images/questions.gif" /></td>
                     <td><b>Unit based and project work:</b> <br/><a href="mailto:ned.elmore@prodigious.com">ned.elmore@prodigious.com</a></td>
                   </tr>
                 </table>
@@ -113,7 +85,8 @@
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
   </body>
 </html>
