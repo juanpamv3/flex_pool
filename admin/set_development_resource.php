@@ -1,4 +1,13 @@
-<? include 'header.php'; ?>
+<?php
+// include actions archive for set day of the week
+include '../scripts/actions.php';
+
+$connection = connect("localhost", "root", "root", "flex_pool_db");
+$date = date('D');
+$today = setDay($date);
+
+include 'header.php';
+?>
       <div class="col-sm-offset-2 col-sm-8 innerContainer">
         <div class="col-sm-12 resoursesMainBlock">
           <img src="../images/development_icon.png" class="main_icon" />
@@ -32,133 +41,7 @@
                 <p>ACTIONS</p>
               </div>
             </div><!-- End of Resourses header -->
-            <div class="col-sm-12 resourse1">
-              <div class="col-xs-2 mobile_options visible-xs-block">
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-globe option-icon"></span></div><p class="hidden-xs">SITE</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-user option-icon"></span></div><p class="hidden-xs">NAME</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-briefcase option-icon"></span></div><p class="hidden-xs">ROLE</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon glyphicon-edit option-icon"></span></div><p class="hidden-xs">ACTIONS</p>
-              </div>
-              <div class="col-sm-1">
-                <p>CR</p>
-              </div>
-              <div class="col-sm-3">
-                <p class="greenHighlight">Nombre</p>
-              </div>
-              <div class="col-sm-3">
-                <p class="greenHighlight">Creative Designer</p>
-              </div>
-              <div class="col-sm-5">
-                <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
-                <a href="#" class="redBtn"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="hidden-xs"> Availability</span></a>
-              </div>
-            </div><!-- End of Resourse -->
-            <div class="col-sm-12 resourse2">
-              <div class="col-xs-2 mobile_options visible-xs-block">
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-globe option-icon"></span></div><p class="hidden-xs">SITE</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-user option-icon"></span></div><p class="hidden-xs">NAME</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-briefcase option-icon"></span></div><p class="hidden-xs">ROLE</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon glyphicon-edit option-icon"></span></div><p class="hidden-xs">ACTIONS</p>
-              </div>
-              <div class="col-sm-1">
-                <p>CR</p>
-              </div>
-              <div class="col-sm-3">
-                <p class="greenHighlight">Nombre</p>
-              </div>
-              <div class="col-sm-3">
-                <p class="greenHighlight">Creative Designer</p>
-              </div>
-              <div class="col-sm-5">
-                <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
-                <a href="#" class="redBtn"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="hidden-xs"> Availability</span></a>
-              </div>
-            </div><!-- End of Resourse -->
-            <div class="col-sm-12 resourse1">
-              <div class="col-xs-2 mobile_options visible-xs-block">
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-globe option-icon"></span></div><p class="hidden-xs">SITE</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-user option-icon"></span></div><p class="hidden-xs">NAME</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-briefcase option-icon"></span></div><p class="hidden-xs">ROLE</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon glyphicon-edit option-icon"></span></div><p class="hidden-xs">ACTIONS</p>
-              </div>
-              <div class="col-sm-1">
-                <p>CR</p>
-              </div>
-              <div class="col-sm-3">
-                <p class="greenHighlight">Nombre</p>
-              </div>
-              <div class="col-sm-3">
-                <p class="greenHighlight">Creative Designer</p>
-              </div>
-              <div class="col-sm-5">
-                <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
-                <a href="#" class="redBtn"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="hidden-xs"> Availability</span></a>
-              </div>
-            </div><!-- End of Resourse -->
-            <div class="col-sm-12 resourse2">
-              <div class="col-xs-2 mobile_options visible-xs-block">
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-globe option-icon"></span></div><p class="hidden-xs">SITE</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-user option-icon"></span></div><p class="hidden-xs">NAME</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-briefcase option-icon"></span></div><p class="hidden-xs">ROLE</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon glyphicon-edit option-icon"></span></div><p class="hidden-xs">ACTIONS</p>
-              </div>
-              <div class="col-sm-1">
-                <p>CR</p>
-              </div>
-              <div class="col-sm-3">
-                <p class="greenHighlight">Nombre</p>
-              </div>
-              <div class="col-sm-3">
-                <p class="greenHighlight">Creative Designer</p>
-              </div>
-              <div class="col-sm-5">
-                <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete </span></a>
-                <a href="#" class="redBtn"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="hidden-xs"> Availability</span></a>
-              </div>
-            </div><!-- End of Resourse -->
-            <div class="col-sm-12 resourse1">
-              <div class="col-xs-2 mobile_options visible-xs-block">
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-globe option-icon"></span></div><p class="hidden-xs">SITE</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-user option-icon"></span></div><p class="hidden-xs">NAME</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-briefcase option-icon"></span></div><p class="hidden-xs">ROLE</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon glyphicon-edit option-icon"></span></div><p class="hidden-xs">ACTIONS</p>
-              </div>
-              <div class="col-sm-1">
-                <p>CR</p>
-              </div>
-              <div class="col-sm-3">
-                <p class="greenHighlight">Nombre</p>
-              </div>
-              <div class="col-sm-3">
-                <p class="greenHighlight">Creative Designer</p>
-              </div>
-              <div class="col-sm-5">
-                <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
-                <a href="#" class="redBtn"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="hidden-xs"> Availability</span></a>
-              </div>
-            </div><!-- End of Resourse -->
-
-            <div class="col-sm-12 resourse2">
-              <div class="col-xs-2 mobile_options visible-xs-block">
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-globe option-icon"></span></div><p class="hidden-xs">SITE</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-user option-icon"></span></div><p class="hidden-xs">NAME</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon-briefcase option-icon"></span></div><p class="hidden-xs">ROLE</p>
-                <div class="visible-xs-block"><span class="glyphicon glyphicon glyphicon-edit option-icon"></span></div><p class="hidden-xs">ACTIONS</p>
-              </div>
-              <div class="col-sm-1">
-                <p>CR</p>
-              </div>
-              <div class="col-sm-3">
-                <p class="greenHighlight">Nombre</p>
-              </div>
-              <div class="col-sm-3">
-                <p class="greenHighlight">Creative Designer</p>
-              </div>
-              <div class="col-sm-5">
-                <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
-                <a href="#" class="redBtn"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="hidden-xs"> Availability</span></a>
-              </div>
-            </div><!-- End of Resourse -->
+            <?php adminGetAvailable($connection, $today, 3) ?>
         </div>
       </div><!-- End of Available Resourses -->
 
@@ -186,133 +69,9 @@
                     <p>ACTIONS</p>
                   </div>
                 </div><!-- End of Resourses header -->
-                <div class="col-sm-12 resourse1">
-                  <div class="col-xs-2 mobile_options visible-xs-block">
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-globe option-icon"></span></div><p class="hidden-xs">SITE</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-user option-icon"></span></div><p class="hidden-xs">NAME</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-briefcase option-icon"></span></div><p class="hidden-xs">ROLE</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon glyphicon-edit option-icon"></span></div><p class="hidden-xs">ACTIONS</p>
-                  </div>
-                  <div class="col-sm-1">
-                    <p>CR</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <p class="greenHighlight">Nombre</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <p class="greenHighlight">Creative Designer</p>
-                  </div>
-                  <div class="col-sm-5">
-                    <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
-                    <a href="#" class="redBtn"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="hidden-xs"> Availability</span></a>
-                 </div>
-                </div><!-- End of Resourse -->
-                <div class="col-sm-12 resourse2">
-                  <div class="col-xs-2 mobile_options visible-xs-block">
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-globe option-icon"></span></div><p class="hidden-xs">SITE</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-user option-icon"></span></div><p class="hidden-xs">NAME</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-briefcase option-icon"></span></div><p class="hidden-xs">ROLE</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon glyphicon-edit option-icon"></span></div><p class="hidden-xs">ACTIONS</p>
-                  </div>
-                  <div class="col-sm-1">
-                    <p>CR</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <p class="greenHighlight">Nombre</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <p class="greenHighlight">Creative Designer</p>
-                  </div>
-                  <div class="col-sm-5">
-                    <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
-                    <a href="#" class="redBtn"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="hidden-xs"> Availability</span></a>
-                 </div>
-                </div><!-- End of Resourse -->
-                <div class="col-sm-12 resourse1">
-                  <div class="col-xs-2 mobile_options visible-xs-block">
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-globe option-icon"></span></div><p class="hidden-xs">SITE</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-user option-icon"></span></div><p class="hidden-xs">NAME</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-briefcase option-icon"></span></div><p class="hidden-xs">ROLE</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon glyphicon-edit option-icon"></span></div><p class="hidden-xs">ACTIONS</p>
-                  </div>
-                  <div class="col-sm-1">
-                    <p>CR</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <p class="greenHighlight">Nombre</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <p class="greenHighlight">Creative Designer</p>
-                  </div>
-                  <div class="col-sm-5">
-                    <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
-                    <a href="#" class="redBtn"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="hidden-xs"> Availability</span></a>
-                 </div>
-                </div><!-- End of Resourse -->
-                <div class="col-sm-12 resourse2">
-                  <div class="col-xs-2 mobile_options visible-xs-block">
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-globe option-icon"></span></div><p class="hidden-xs">SITE</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-user option-icon"></span></div><p class="hidden-xs">NAME</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-briefcase option-icon"></span></div><p class="hidden-xs">ROLE</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon glyphicon-edit option-icon"></span></div><p class="hidden-xs">ACTIONS</p>
-                  </div>
-                  <div class="col-sm-1">
-                    <p>CR</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <p class="greenHighlight">Nombre</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <p class="greenHighlight">Creative Designer</p>
-                  </div>
-                  <div class="col-sm-5">
-                    <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
-                    <a href="#" class="redBtn"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="hidden-xs"> Availability</span></a>
-                 </div>
-                </div><!-- End of Resourse -->
-                <div class="col-sm-12 resourse1">
-                  <div class="col-xs-2 mobile_options visible-xs-block">
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-globe option-icon"></span></div><p class="hidden-xs">SITE</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-user option-icon"></span></div><p class="hidden-xs">NAME</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-briefcase option-icon"></span></div><p class="hidden-xs">ROLE</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon glyphicon-edit option-icon"></span></div><p class="hidden-xs">ACTIONS</p>
-                  </div>
-                  <div class="col-sm-1">
-                    <p>CR</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <p class="greenHighlight">Nombre</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <p class="greenHighlight">Creative Designer</p>
-                  </div>
-                  <div class="col-sm-5">
-                    <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
-                    <a href="#" class="redBtn"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="hidden-xs"> Availability</span></a>
-                 </div>
-                </div><!-- End of Resourse -->
-
-                <div class="col-sm-12 resourse2">
-                  <div class="col-xs-2 mobile_options visible-xs-block">
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-globe option-icon"></span></div><p class="hidden-xs">SITE</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-user option-icon"></span></div><p class="hidden-xs">NAME</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon-briefcase option-icon"></span></div><p class="hidden-xs">ROLE</p>
-                    <div class="visible-xs-block"><span class="glyphicon glyphicon glyphicon-edit option-icon"></span></div><p class="hidden-xs">ACTIONS</p>
-                  </div>
-                  <div class="col-sm-1">
-                    <p>CR</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <p class="greenHighlight">Nombre</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <p class="greenHighlight">Creative Designer</p>
-                  </div>
-                  <div class="col-sm-5">
-                    <a href="#" class="redBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
-                    <a href="#" class="redBtn"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="hidden-xs"> Availability</span></a>
-                 </div>
-                </div><!-- End of Resourse -->
+                <?php
+                adminGetUnvailable($connection, $today, 3)
+                ?>
             </div>
 
         </div>
@@ -324,3 +83,11 @@
         </div><!-- End of Prodigious Logo -->
       </div><!-- End of innerContainer -->
 <? include 'footer.php'; ?>
+<script>
+// delete
+  $('a').click(function(){
+    var rowNumber = $(this).data('rownumber');
+    $.post( "../scripts/deleteUser.php", { _id: rowNumber } );
+    $(this).remove();
+  });
+</script>

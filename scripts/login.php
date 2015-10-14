@@ -1,4 +1,5 @@
 <?php
+session_start();
 $_user = $_POST["_user"];
 $_password = $_POST["_password"];
 
@@ -14,5 +15,8 @@ if ($mysqli->connect_errno) {
   }else {
     echo "Something is wrong with your user name or password";
   }
+}
+if(isset($_SESSION["user_id"])) {
+	header('Location: ../admin/index.php');
 }
 ?>

@@ -1,10 +1,11 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "root", "flex_pool_db2");
-if ($mysqli->connect_errno) {
-    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-} else {
+// include actions archive for set day of the week
+include 'scripts/actions.php';
 
-} ?>
+$connection = connect("localhost", "root", "root", "flex_pool_db");
+$date = date('D');
+$today = setDay($date);
+ ?>
 <? include 'header.php'; ?>
         <!-- Categories -->
         <div class="col-sm-12 resoursesMainBlock">
@@ -35,51 +36,8 @@ if ($mysqli->connect_errno) {
                 <p>SKILLS</p>
               </div>
             </div><!-- End of Resourses header -->
-             <?php
-            $sql = "SELECT id, name, country, role, skills, availability FROM profiles WHERE category = 2";
-            $result = $mysqli->query($sql);
-            if ($result->num_rows > 0) {
-                // output data of each row
-                while($row = $result->fetch_array()) {
-                  $avStatus = json_decode($row["availability"]);
-                  $arrlength = count($avStatus);
-                    if ($avStatus[0] == "available" || $avStatus[0] == "halftime"){
-                      $number = $row["id"];
-                      $resultado = $number%2;
-                      if ( $resultado != 0){
-                        echo '<div class="col-sm-12 resourse1">
-                          <div class="col-sm-1">
-                            <p>'. $row["country"].'</p>
-                          </div>
-                          <div class="col-sm-3">
-                            <a href="profile.php?id='. $row["id"].'">
-                            <p class="greenHighlight">'. $row["role"].'</p>
-                            </a>
-                          </div>
-                          <div class="col-sm-8">
-                            <p>'. $row["skills"].'</p>
-                          </div>
-                        </div>';
-                      } else {
-                        echo '<div class="col-sm-12 resourse2">
-                          <div class="col-sm-1">
-                            <p>'. $row["country"].'</p>
-                          </div>
-                          <div class="col-sm-3">
-                          <a href="profile.php?id='. $row["id"].'">
-                            <p class="greenHighlight">'. $row["role"].'</p>
-                          </a>
-                          </div>
-                          <div class="col-sm-8">
-                            <p>'. $row["skills"].'</p>
-                          </div>
-                        </div>';
-                      }
-                    }
-                }
-            } else {
-                echo "0 results";
-            }
+            <?php
+            getAvailable($connection, $today, 2);
              ?>
         </div>
       </div><!-- End of Available Resourses -->
@@ -105,47 +63,8 @@ if ($mysqli->connect_errno) {
               <p>SKILLS</p>
             </div>
           </div><!-- End of Resourses header -->
-          <?php
-          $sql = "SELECT id, name, country, role, skills, availability FROM profiles WHERE category = 2";
-          $result = $mysqli->query($sql);
-          if ($result->num_rows > 0) {
-              // output data of each row
-              while($row = $result->fetch_array()) {
-                $avStatus = json_decode($row["availability"]);
-                $arrlength = count($avStatus);
-                  if ($avStatus[0] == "booked"){
-                    $number = $row["id"];
-                    $resultado = $number%2;
-                    if ( $resultado != 0){
-                      echo '<div class="col-sm-12 resourse1">
-                        <div class="col-sm-1">
-                          <p>'. $row["country"].'</p>
-                        </div>
-                        <div class="col-sm-3">
-                          <p class="greenHighlight">'. $row["role"].'</p>
-                        </div>
-                        <div class="col-sm-8">
-                          <p>'. $row["skills"].'</p>
-                        </div>
-                      </div>';
-                    } else {
-                      echo '<div class="col-sm-12 resourse2">
-                        <div class="col-sm-1">
-                          <p>'. $row["country"].'</p>
-                        </div>
-                        <div class="col-sm-3">
-                          <p class="greenHighlight">'. $row["role"].'</p>
-                        </div>
-                        <div class="col-sm-8">
-                          <p>'. $row["skills"].'</p>
-                        </div>
-                      </div>';
-                    }
-                  }
-              }
-          } else {
-              echo "0 results";
-          }
+         <?php
+          getUnvailable($connection, $today, 2);
            ?>
       </div>
     </div><!-- End of Available Resourses -->
