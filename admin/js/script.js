@@ -21,23 +21,40 @@ $(function(){
 			}
 		}
 		this.className = current_className;
-		current_state = this.className.split(" ")[1]; 
-		day = this.className.split(" ")[2]; 
+		current_state = this.className.split(" ")[1];
+		day = this.className.split(" ")[2];
 		data[day] = current_state;
-		console.log(data);
 		//Tengo datos dia y current_states
 	});
 
-	document.getElementById("availability_btn").addEventListener("click", function(){
+	//Envía datos al servidor
+	function SendData(datos){
+		this.datos = datos;
+	}
+
+
+	SendData.prototype.ajaxCall = function(){
+		var datos = this.datos;
+		var form = $( "#profile_form" ).serializeArray();
+		form = JSON.stringify(form);
+		datos["formData"] = form;
+
+		$.post( "../scripts/createUser.php", datos)
+  			.done(function(data) {
+
+  		});
+	}
+
+	document.getElementById("availability_btn").addEventListener("click", function(event){
 		//envio los datos as servidor
-		$.ajax({
-			url: "https://eddesign.co",
-			method: "POST",
-			data: data
-		})
-		 .done(function(){
-		 	console.log('success');
-		 });
+		event.preventDefault();
+		var sendData = new SendData(data);
+		$( ".circle" ).each(function( index ) {
+			current_state = this.className.split(" ")[1];
+			day = this.className.split(" ")[2];
+			data[day] = current_state;
+		});
+		sendData.ajaxCall(data);
 	});
 
 });
