@@ -187,6 +187,7 @@ function adminGetAvailable($connection, $today, $category){
                   <p>'. $row["country"].'</p>
                 </div>
                 <div class="col-sm-3">
+<<<<<<< HEAD
                   <a href="profile.php?id='. $row["id"].'">
                     <p class="'.setColor($category).'">'. $row["name"].'</p>
                   </a>
@@ -195,6 +196,12 @@ function adminGetAvailable($connection, $today, $category){
                   <a href="profile.php?id='. $row["id"].'">
                     <p class="'.setColor($category).'">'. $row["role"].'</p>
                   </a>
+=======
+                    <p class="'.setColor($category).'">'. $row["name"].'</p>
+                </div>
+                <div class="col-sm-3">
+                    <p class="'.setColor($category).'">'. $row["role"].'</p>
+>>>>>>> FETCH_HEAD
                 </div>
                 <div class="col-sm-5">
                   <a href="" class="redBtn" data-rownumber="'. $row["id"].'"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
@@ -213,6 +220,7 @@ function adminGetAvailable($connection, $today, $category){
             <p>'. $row["country"].'</p>
           </div>
           <div class="col-sm-3">
+<<<<<<< HEAD
             <a href="profile.php?id='. $row["id"].'">
               <p class="'.setColor($category).'">'. $row["name"].'</p>
             </a>
@@ -221,6 +229,12 @@ function adminGetAvailable($connection, $today, $category){
             <a href="profile.php?id='. $row["id"].'">
               <p class="'.setColor($category).'">'. $row["role"].'</p>
             </a>
+=======
+              <p class="'.setColor($category).'">'. $row["name"].'</p>
+          </div>
+          <div class="col-sm-3">
+              <p class="'.setColor($category).'">'. $row["role"].'</p>
+>>>>>>> FETCH_HEAD
           </div>
           <div class="col-sm-5">
             <a href="" class="redBtn" data-rownumber="'. $row["id"].'"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
@@ -258,6 +272,7 @@ function adminGetUnvailable($connection, $today, $category){
                   <p>'. $row["country"].'</p>
                 </div>
                 <div class="col-sm-3">
+<<<<<<< HEAD
                   <a href="profile.php?id='. $row["id"].'">
                     <p class="'.setColor($category).'">'. $row["name"].'</p>
                   </a>
@@ -266,6 +281,12 @@ function adminGetUnvailable($connection, $today, $category){
                   <a href="profile.php?id='. $row["id"].'">
                     <p class="'.setColor($category).'">'. $row["role"].'</p>
                   </a>
+=======
+                  <p class="'.setColor($category).'">'. $row["name"].'</p>
+                </div>
+                <div class="col-sm-3">
+                  <p class="'.setColor($category).'">'. $row["role"].'</p>
+>>>>>>> FETCH_HEAD
                 </div>
                 <div class="col-sm-5">
                   <a href="" class="redBtn" data-rownumber="'. $row["id"].'"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>
@@ -284,6 +305,7 @@ function adminGetUnvailable($connection, $today, $category){
             <p>'. $row["country"].'</p>
           </div>
           <div class="col-sm-3">
+<<<<<<< HEAD
             <a href="profile.php?id='. $row["id"].'">
               <p class="'.setColor($category).'">'. $row["name"].'</p>
             </a>
@@ -292,6 +314,12 @@ function adminGetUnvailable($connection, $today, $category){
             <a href="profile.php?id='. $row["id"].'">
               <p class="'.setColor($category).'">'. $row["role"].'</p>
             </a>
+=======
+            <p class="'.setColor($category).'">'. $row["name"].'</p>
+          </div>
+          <div class="col-sm-3">
+            <p class="'.setColor($category).'">'. $row["role"].'</p>
+>>>>>>> FETCH_HEAD
           </div>
           <div class="col-sm-5">
             <a href="" class="redBtn" data-rownumber="'. $row["id"].'"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="hidden-xs"> Delete</span></a>

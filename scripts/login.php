@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 session_start();
+=======
+>>>>>>> FETCH_HEAD
 $_user = $_POST["_user"];
 $_password = $_POST["_password"];
 
@@ -11,12 +14,19 @@ if ($mysqli->connect_errno) {
   $result = $mysqli->query($sql);
   $row = $result->fetch_array;
   if ($result->num_rows > 0) {
+<<<<<<< HEAD
     header('Location: ../admin/index.php');
+=======
+    header('Location: ../admin/index.html');
+>>>>>>> FETCH_HEAD
   }else {
     echo "Something is wrong with your user name or password";
   }
 }
+<<<<<<< HEAD
 if(isset($_SESSION["user_id"])) {
 	header('Location: ../admin/index.php');
 }
+=======
+>>>>>>> FETCH_HEAD
 ?>

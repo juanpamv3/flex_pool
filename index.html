@@ -1,14 +1,3 @@
-<?php
-// include actions archive for set day of the week
-include 'scripts/actions.php';
-
-$connection = connect("localhost", "root", "root", "flex_pool_db");
-$date = date('D');
-$today = setDay($date);
-?>
-<<<<<<< HEAD
-<? include 'header.php'; ?>
-=======
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -47,86 +36,57 @@ $today = setDay($date);
             </ul>
           </nav>
         </header><!-- End of header -->
->>>>>>> FETCH_HEAD
         <!-- Categories -->
-        <div class="col-sm-12 resoursesMainBlock">
-          <img src="images/design_icon.png" />
-          <h1>DESIGN | RESOURSES</h1>
-          <p>Select one role to see full availability</p>
-
+        <div class="col-sm-12 categoriesBlock">
+          <h1>Staff Allocation | Status</h1>
+          <p>Select Category</p>
+          <div class="col-sm-offset-1 col-sm-10 categoryContainer">
+            <a href="design_resourses.php" style="color:#000">
+              <div class="col-sm-3 categories">
+                <img src="images/design_icon.png" />
+                <h4>DESIGN</h4>
+              </div>
+            </a>
+            <a href="motion_resourses.php" style="color:#000">
+            <div class="col-sm-3 categories">
+              <img src="images/motion_icon.png" />
+              <h4>MOTION DESIGN</h4>
+            </div>
+          </a>
+            <a href="development_resourses.php" style="color:#000">
+            <div class="col-sm-3 categories">
+              <img src="images/development_icon.png" />
+              <h4>DEVELOPMENT</h4>
+            </div>
+          </a>
+            <a href="qa_resourses.php" style="color:#000">
+            <div class="col-sm-3 categories">
+              <img src="images/qa_icon.png" />
+              <h4>QA ANALYST</h4>
+            </div>
+          </a>
+          </div>
         </div><!-- End of categories -->
-
-        <div class="col-sm-12 designResoursesBlock"><!-- availables resourses BOX -->
+        <div class="col-sm-12 rulesBlock">
           <div class="col-sm-4" style="width: auto; padding-right: 10px;" id="sectionHeader">
-            <h4>AVAILABLE</h4>
+            <h4>RULES OF ENGAGEMENT:</h4>
           </div>
           <div class="row hrContainer">
             <hr class="primaryHr"/>
           </div>
-          <!-- Resourses Block -->
           <div class="col-sm-12">
-            <!-- Resourses header -->
-            <div class="col-sm-12 resourse1">
-              <div class="col-sm-1">
-                <p>SITE</p>
-              </div>
-              <div class="col-sm-3">
-                <p>ROLE</p>
-              </div>
-              <div class="col-sm-8">
-                <p>SKILLS</p>
-              </div>
-            </div><!-- End of Resourses header -->
-<<<<<<< HEAD
-
-           <?php
-            getAvailable($connection, $today, 1);
-             ?>
-
+          <ul>
+            <li>Usage is based upon a first come first served model.</li>
+            <li>Minimum time a resource can be reserved is an 8 h ours period.</li>
+            <li>Holiday and OT rules apply.</li>
+            <li>Book Commitment: Pay per what is originally booked at a given time.</li>
+          </ul>
         </div>
-      </div><!-- End of Available Resourses --> 
-=======
-            <?php
-            getAvailable($connection, $today, 1);
-             ?>
-        </div>
-      </div><!-- End of Available Resourses -->
->>>>>>> FETCH_HEAD
-
-      <div class="col-sm-12 designResoursesBlock"><!-- BOOKED resourses BOX -->
-        <div class="col-sm-4" style="width: auto; padding-right: 10px;" id="sectionHeader">
-          <h4>BOOKED</h4>
-        </div>
-        <div class="row hrContainer">
-          <hr class="primaryHr"/>
-        </div>
-        <!-- Resourses Block -->
-        <div class="col-sm-12">
-          <!-- Resourses header -->
-          <div class="col-sm-12 resourse1">
-            <div class="col-sm-1">
-              <p>SITE</p>
-            </div>
-            <div class="col-sm-3">
-              <p>ROLE</p>
-            </div>
-            <div class="col-sm-8">
-              <p>SKILLS</p>
-            </div>
-          </div><!-- End of Resourses header -->
-          <?php
-          getUnvailable($connection, $today, 1);
-           ?>
-      </div>
-    </div><!-- End of BOOKED Resourses -->
-
+        </div><!-- End of categories -->
         <div class="col-sm-12 prodigiousLogo">
           <img src="images/prodigious_logo.svg" />
         </div><!-- End of Prodigious Logo -->
       </div><!-- End of innerContainer -->
-<<<<<<< HEAD
-<? include 'footer.php'; ?>
-=======
       <footer class="col-sm-12">
         <div class="col-sm-offset-2 col-sm-8 footerInnerContainer">
           <div class="col-sm-12">
@@ -165,4 +125,3 @@ $today = setDay($date);
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
->>>>>>> FETCH_HEAD

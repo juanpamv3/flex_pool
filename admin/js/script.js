@@ -21,8 +21,13 @@ $(function(){
 			}
 		}
 		this.className = current_className;
+<<<<<<< HEAD
 		current_state = this.className.split(" ")[1]; 
 		day = this.className.split(" ")[2]; 
+=======
+		current_state = this.className.split(" ")[1];
+		day = this.className.split(" ")[2];
+>>>>>>> FETCH_HEAD
 		data[day] = current_state;
 		//Tengo datos dia y current_states
 	});
@@ -41,7 +46,11 @@ $(function(){
 
 		$.post( "../scripts/createUser.php", datos)
   			.done(function(data) {
+<<<<<<< HEAD
     	
+=======
+
+>>>>>>> FETCH_HEAD
   		});
 	}
 
@@ -51,10 +60,18 @@ $(function(){
 		var sendData = new SendData(data);
 		$( ".circle" ).each(function( index ) {
 			current_state = this.className.split(" ")[1];
+<<<<<<< HEAD
 			day = this.className.split(" ")[2]; 
+=======
+			day = this.className.split(" ")[2];
+>>>>>>> FETCH_HEAD
 			data[day] = current_state;
 		});
 		sendData.ajaxCall(data);
 	});
 
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> FETCH_HEAD
